@@ -1,0 +1,34 @@
+{
+  "author": "",
+  "dependencies": {
+    "jest": "^26.4.2",
+    "playwright": "^1.4.1",
+    "ts-jest": "^26.4.0",
+    "typescript": "^4.0.3"
+  },
+  "description": "",
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@types/node": "^13.13.21",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --allow-empty"
+    }
+  },
+  "keywords": [],
+  "lint-staged": {
+    "*.{js,ts,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "name": "playwright-template",
+  "scripts": {
+    "pretty": "prettier --no-config './__tests__/*.ts' --write",
+    "test": "jest"
+  },
+  "version": "0.0.1"
+}
