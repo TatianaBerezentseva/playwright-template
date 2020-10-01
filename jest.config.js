@@ -1,10 +1,10 @@
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
+  preset: "ts-jest",
+  testEnvironment: "node",
   testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"],
   testPathIgnorePatterns: ["/node_modules/"],
-  setupFilesAfterEnv: ["./jest.setup.js"],
   transform: {
-    "^.+\\.tsx?$": "ts-jest"
-  }
+    "^.+\\.tsx?$": "ts-jest",
+  },
+  setupFilesAfterEnv: ["jest-expect-message", "./jest.setup.js"],
 };

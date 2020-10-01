@@ -5,7 +5,8 @@
     "resolveJsonModule": true,
     "types": [
       "node",
-      "jest"
+      "jest",
+      "jest-expect-message"
     ],
     "typeRoots": [
       "node_modules/@types"

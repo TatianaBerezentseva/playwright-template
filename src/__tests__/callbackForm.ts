@@ -1,4 +1,4 @@
-import { Browser, chromium } from "playwright";
+import { Browser, Page, chromium } from "playwright";
 
 let browser: Browser;
 
@@ -13,7 +13,7 @@ describe("Проверка обратного звонка", () => {
     const website = "https://sdvor.com/";
     const modalTitleText = "Заказать обратный звонок";
     const context = await browser.newContext();
-    const page = await context.newPage();
+    const page: Page = await context.newPage();
     await page.goto(website);
     await page.click('[data-testid="CallBackButton"]');
 
